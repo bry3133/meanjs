@@ -220,7 +220,7 @@
         $scope.ESSIEOption = element.checked;
       } else if (element.value.toLowerCase() === 'industrial and systems engineering') {
         $scope.ISEOption = element.checked;
-      } else if (element.value.toLowerCase() === 'materials science and aerospace engineering') {
+      } else if (element.value.toLowerCase() === 'materials science and engineering') {
         $scope.MSEOption = element.checked;
       } else if (element.value.toLowerCase() === 'mechanical and aerospace engineering') {
         $scope.MAEOption = element.checked;
@@ -337,8 +337,8 @@
           if (originalList[i].major.toLowerCase() === ('industrial and systems engineering')) {
             currentFilteredSet.add(originalList[i]);
           }
-        } else if (name.toLowerCase() === 'materials science and aerospace engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
-          if (originalList[i].major.toLowerCase() === ('materials science and aerospace engineering')) {
+        } else if (name.toLowerCase() === 'materials science and engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('materials science and engineering')) {
             currentFilteredSet.add(originalList[i]);
           }
         } else if (name.toLowerCase() === 'mechanical and aerospace engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
