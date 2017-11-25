@@ -25,7 +25,28 @@
     $scope.searchValue = null;
     $scope.shouldShowFilters = false;
     $scope.availabilityOption = false;
-    $scope.csOption = false;
+    $scope.ABEOption = false;
+    $scope.ASEOption = false;
+    $scope.BEOption = false;
+    $scope.BAOption = false;
+    $scope.BMEOption = false;
+    $scope.CHEOption = false;
+    $scope.CIVOption = false;
+    $scope.CISEOption = false;
+    $scope.CPEOption = false;
+    $scope.CSEOption = false;
+    $scope.CSCOption = false;
+    $scope.DASOption = false;
+    $scope.ECEOption = false;
+    $scope.EEOption = false;
+    $scope.ENEOption = false;
+    $scope.EESOption = false;
+    $scope.ESSIEOption = false;
+    $scope.ISEOption = false;
+    $scope.MSEOption = false;
+    $scope.MAEOption = false;
+    $scope.MEOption = false;
+    $scope.PKGOption = false;
     $scope.sponsorOption = false;
     $scope.studentOption = false;
 
@@ -163,8 +184,50 @@
     function storeValueForElement(element) {
       if (element.value.toLowerCase() === 'availability') {
         $scope.availabilityOption = element.checked;
-      } else if (element.value.toLowerCase() === 'computer-science') {
-        $scope.csOption = element.checked;
+      } else if (element.value.toLowerCase() === 'agricultural and biological engineering') {
+        $scope.ABEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'aerospace engineering') {
+        $scope.ASEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'biological engineering') {
+        $scope.BEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'business administration') {
+        $scope.BAOption = element.checked;
+      } else if (element.value.toLowerCase() === 'biomedical engineering') {
+        $scope.BMEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'chemical engineering') {
+        $scope.CHEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'civil engineering') {
+        $scope.CIVOption = element.checked;
+      } else if (element.value.toLowerCase() === 'computer and information science engineering') {
+        $scope.CISEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'computer engineering') {
+        $scope.CPEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'computer science - engineering') {
+        $scope.CSEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'computer science - liberal arts') {
+        $scope.CSCOption = element.checked;
+      } else if (element.value.toLowerCase() === 'digital arts and sciences') {
+        $scope.DASOption = element.checked;
+      } else if (element.value.toLowerCase() === 'electrical and computer engineering') {
+        $scope.ECEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'electrical engineering') {
+        $scope.EEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'environmental engineering') {
+        $scope.ENEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'environmental engineering science') {
+        $scope.EESOption = element.checked;
+      } else if (element.value.toLowerCase() === 'engineering school for sustainable infrastructure and the environment') {
+        $scope.ESSIEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'industrial and systems engineering') {
+        $scope.ISEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'materials science and aerospace engineering') {
+        $scope.MSEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'mechanical and aerospace engineering') {
+        $scope.MAEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'mechanical engineering') {
+        $scope.MEOption = element.checked;
+      } else if (element.value.toLowerCase() === 'packaging sciences') {
+        $scope.PKGOption = element.checked;
       } else if (element.value.toLowerCase() === 'sponsor') {
         $scope.sponsorOption = element.checked;
       } else if (element.value.toLowerCase() === 'student') {
@@ -202,8 +265,92 @@
           if (originalList[i].availabilityStatus.toLowerCase() === ('available')) {
             currentFilteredSet.add(originalList[i]);
           }
-        } else if (name.toLowerCase() === 'computer-science' && originalList[i].major !== null && originalList[i].major !== undefined) {
-          if (originalList[i].major.toLowerCase() === ('computer science')) {
+        } else if (name.toLowerCase() === 'agricultural and biological engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('agricultural and biological engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'aerospace engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('aerospace engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'biological engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('biological engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'business administration' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('business administration')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'biomedical engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('biomedical engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'chemical engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('chemical engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'civil engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('civil engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'computer and information science engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('computer and information science engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'computer engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('computer engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'computer science - engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('computer science - engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'computer science - liberal arts' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('computer science - liberal arts')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'digital arts and sciences' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('digital arts and sciences')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'electrical and computer engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('electrical and computer engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'electrical engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('electrical engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'environmental engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('environmental engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'environmental engineering science' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('environmental engineering science')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'engineering school for sustainable infrastructure and the environment' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('engineering school for sustainable infrastructure and the environment')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'industrial and systems engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('industrial and systems engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'materials science and aerospace engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('materials science and aerospace engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'mechanical and aerospace engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('mechanical and aerospace engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'mechanical engineering' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('mechanical engineering')) {
+            currentFilteredSet.add(originalList[i]);
+          }
+        } else if (name.toLowerCase() === 'packaging sciences' && originalList[i].major !== null && originalList[i].major !== undefined) {
+          if (originalList[i].major.toLowerCase() === ('packaging sciences')) {
             currentFilteredSet.add(originalList[i]);
           }
         } else if (name.toLowerCase() === 'sponsor' && originalList[i].type !== null && originalList[i].type !== undefined) {
