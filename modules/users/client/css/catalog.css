@@ -11,7 +11,7 @@
 }
 
 .availability-status {
-	font-size: 10px;
+	font-size: 13px;
 }
 
 .cart {
@@ -22,6 +22,9 @@
 
 .text-right {
 	text-align: right;
+}
+.text-center{
+	text-align: center;
 }
 
 .headers {
@@ -34,4 +37,37 @@
 
 .detail-action-buttons-div {
 	margin-top: 16px;
+}
+
+.name {
+	color: #095799;
+	font-size: 16px;
+}
+
+.information{
+	font-family: 'Exo', sans-serif !important;
+}
+
+.detailedInfo{
+	background-color: #e7f3fd !important;
+	font-family: 'Exo', sans-serif !important;
+}
+.approval{
+	font-size: 13px;
+}
+.orange{
+	color: #F37022;
+}
+.light-orange{
+	color: #f5813d;
+}
+.inCart{
+	background-color: #fdefe7;
+}
+
+.scroll_box {
+	border: 1px solid #bbb;
+	position: absolute;
+	text-align: left;
+	top: 10px;
 }
