@@ -45,12 +45,12 @@
 }
 
 .information{
-	font-family: 'Exo', sans-serif;
+	font-family: 'Exo', sans-serif !important;
 }
 
 .detailedInfo{
 	background-color: #e7f3fd !important;
-	font-family: 'Exo', sans-serif;
+	font-family: 'Exo', sans-serif !important;
 }
 .approval{
 	font-size: 13px;
@@ -63,4 +63,11 @@
 }
 .inCart{
 	background-color: #fdefe7;
+}
+
+.scroll_box {
+	border: 1px solid #bbb;
+	position: absolute;
+	text-align: left;
+	top: 10px;
 }

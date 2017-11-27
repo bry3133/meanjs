@@ -46,7 +46,7 @@
 					  	</div>
 					</fieldset>
 				</form>
-	      	</div>
+	    </div>
 	    <div class="tableWrapper">
 	        <table class="table">
 	            <tbody class="container">
@@ -84,10 +84,10 @@
 
 												<!--If the user is an admin than show the appproval status-->
 												<div class="approval" style="color:red;" ng-if="user.type === 'student' && vm.authentication.user.type === 'admin' && user.approve === false">
-													<br>Disapprove
+													<br>Disapproved
 												</div>
 												<div class="approval" style="color:green;" ng-if="user.type === 'student' && vm.authentication.user.type === 'admin' && user.approve === true">
-													<br>Approve
+													<br>Approved
 												</div>
 	                    </td>
 	                  </div>
@@ -97,7 +97,10 @@
 	      </div>
 	    </div>
 	    <div class="col-md-6">
-	      <div class="jumbotron detailedInfo">
+	      <div class="jumbotron detailedInfo scroll_box" id="scroll_box">
+					<div ng-if="detailedInfo.availabilityStatus" class="text-right availability-status">
+								<i style="color: #095799;">Employment Status: {{detailedInfo.availabilityStatus}}</i>
+					</div>
 					<h2 style="color: #095799; padding-top: 10px;">Detailed Information</h2>
 					<p ng-if="!detailedInfo">
 						Select a student to learn more!
@@ -114,11 +117,8 @@
 	                <u class="light-orange">Team</u> <br>{{detailedInfo.teamName}}
 	            </div>
 	            <div ng-if="detailedInfo.bio">
-	                <u class="light-orange"><br>Small Bio</u> <br>{{detailedInfo.bio}}
+	                <u class="light-orange"><br>Short Biography</u> <br>{{detailedInfo.bio}}
 	            </div>
-							<div ng-if="detailedInfo.availabilityStatus" class="text-right availability-status">
-		               	<i style="color: #095799;">Employment Status: {{detailedInfo.availabilityStatus}}</i>
-		          </div>
 							<!--If the user is a admin or sponser than add the cart button-->
 	            <div class="detail-action-buttons-div" ng-if="vm.authentication.user.type === 'admin' || vm.authentication.user.type === 'sponsor'">
 		        	<div id="addCart" class="image-left" ng-if="!isInCart(detailedInfo.username)">
