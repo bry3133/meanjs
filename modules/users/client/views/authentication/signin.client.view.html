@@ -10,7 +10,7 @@
     <div class="signin-uf-body"></div>
     <div class="signin-grad"></div>
     <div class="signin-header">
-      <div>IPPD <span>Resume Portal </span></div>
+      <div><img src="IPPD_Logo-BLUE_WhiteText.png" alt="Logo goes here"></div>
     </div>
     <form name="vm.userForm" ng-submit="vm.signin(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
       <div class="login">
@@ -29,7 +29,7 @@
           </div>
           <div class="terms-div">
             <label>
-              <input type="checkbox" name="checkbox" value="check" class="terms-check-box"><span> I agree to the <a href="/terms_and_conditions" target="_blank"> Terms & Conditions</a></span>
+              <input type="checkbox" name="checkbox" value="check" class="terms-check-box" style="color: #F37022;"><span> I agree to the <a href="/terms_and_conditions" target="_blank"> Terms & Conditions</a></span>
             </label>
           </div>
           <input type="submit" value="Sign in" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}"  />

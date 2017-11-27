@@ -29,15 +29,7 @@
 }
 
 .signin-header div {
-  color: #fff;
   float: left;
-  font-family: 'Exo', sans-serif;
-  font-size: 40px;
-  font-weight: 200;
-}
-
-.signin-header div span {
-  color: #015496 !important;
 }
 
 .login {
@@ -54,7 +46,7 @@
   border: 1px solid white;
   border: 1px solid rgba(255,255,255,0.6);
   border-radius: 2px;
-  color: #fff;
+  color: #095799;
   font-family: 'Exo', sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -65,7 +57,7 @@
 }
 
 .customText {
-  color: #fff;
+  color: #F37022;
   font-family: 'Exo', sans-serif;
 }
 
@@ -74,7 +66,7 @@
   border: 1px solid white;
   border: 1px solid #fff;
   border-radius: 2px;
-  color: #a18d6c;
+  color: #095799;
   cursor: pointer;
   font-family: 'Exo', sans-serif;
   font-size: 16px;
@@ -121,7 +113,7 @@
 }
 
 .login input[type='checkbox']:checked {
-  background: #00FF00;
+  background: #fff;
 }
 
 .login input[type='checkbox']:checked:after{

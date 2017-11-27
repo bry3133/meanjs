@@ -1,9 +1,9 @@
 <!--html doc for the admin to edit a user attibutes-->
 <section>
   <div>
-    <h1 class="image-left vertical-bottom">Username: <span ng-bind="vm.user.username"></span></h1>
+    <h1 class="image-left vertical-bottom" style="color: #095799;">Edit User: <span ng-bind="vm.user.username"></span></h1>
     <div class="image-right vertical-bottom user-delete-div">
-      <button class="user-delete-button" ng-click="remove()">Delete</button>
+      <button class="btn btn-danger btn-lg" ng-click="remove()">Delete User</button>
     </div>
   </div>
   <hr width="100%">
@@ -12,14 +12,14 @@
     <form name="userForm" ng-submit="update(userForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label for="firstName">First Name</label>
+          <label class="orange" for="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" class="form-control" ng-model="vm.user.firstName" placeholder="First Name" required autofocus />
           <div ng-messages="userForm.firstName.$error" role="alert">
             <p class="help-block error-text" ng-message="required">First name is required.</p>
           </div>
         </div>
         <div class="form-group" show-errors>
-          <label for="lastName">Last Name</label>
+          <label class="orange" for="lastName">Last Name</label>
           <input type="text" id="lastName" name="lastName" class="form-control" ng-model="vm.user.lastName" placeholder="Last Name" required />
           <div ng-messages="userForm.lastName.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Last name is required.</p>
@@ -27,7 +27,7 @@
         </div>
         <!--A field for the user to add comment about the user's profile and will be displayed on the student's profile-->
         <div class="form-group" show-errors>
-          <label for="comments">Comments</label>
+          <label  class="orange" for="comments">Comments</label>
           <textarea id="comments" name="comments" class="form-control" ng-model="vm.user.comments" placeholder="Comments" style="height: 150px; margin: 1px; padding: 1px; resize: none;"></textarea>
           <div ng-messages="userForm.comments.$error" role="alert">
           </div>
@@ -36,22 +36,22 @@
           <!--Create rabio attoms for the admin to approve or disapprove the user's bio-->
           <form id="approvalOptions" name="approvalOptions" class="filter-form">
             <fieldset class="filter-fieldset">
-              <legend class="filter-legend">Do you approve?</legend>
+              <legend class="orange" class="filter-legend">Do you approve?</legend>
               <div class="filter-div">
                 <!--Depending on the radio button that they push, go ot the swithcApproval function to change the attribute on the database-->
                 <input type="radio" id="yes" name= "approval" value="yes" ng-click="switchApproval()">
-                <label for="yes">Yes</label>
+                <label style="color:green;" for="yes">Yes</label>
               </div>
               <div class="filter-div">
                 <input type="radio" id="no" name= "approval" value="no" ng-click="switchApproval()">
-                <label for="no">No</label>
+                <label style="color:red;" for="no">No</label>
               </div>
             </fieldset>
           </form>
         </div>
         <!--Save the form and call the update function in the controller-->
         <div class="form-group">
-          <input type="submit" value="Update" class="btn btn-default">
+          <input type="submit" value="Update" class="btn btn-primary btn-md">
         </div>
       </fieldset>
     </form>
