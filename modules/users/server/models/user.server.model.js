@@ -1,5 +1,5 @@
 'use strict';
-
+// Model for the user schema whe nthe user is created, called, delted, and updated in the database
 /**
  * Module dependencies
  */
@@ -109,6 +109,17 @@ var UserSchema = new Schema({
     trim: true,
     default: ''
   },
+  comments: {
+    type: String,
+    trim: true,
+    default: ''
+  },
+  // The only one that is not a string becuase it can only be true or false
+  approve: {
+    type: Boolean,
+    trim: true,
+    default: false
+  },
   type: {
     type: String,
     trim: true,
@@ -164,6 +175,9 @@ var UserSchema = new Schema({
   },
   resetPasswordExpires: {
     type: Date
+  },
+  cartData: {
+    type: Array
   }
 });
 
