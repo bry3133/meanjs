@@ -11,6 +11,10 @@
 	display: block;
   float: left;
 }
+.image-center{
+	margin: auto;
+  width: 50%;
+}
 
 .availability-status {
 	font-size: 13px;
