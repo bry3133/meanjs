@@ -29,7 +29,15 @@
 }
 
 .signin-header div {
+  color: #fff;
   float: left;
+  font-family: 'Exo', sans-serif;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+.signin-header div span {
+  color: #015496 !important;
 }
 
 .login {
