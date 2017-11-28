@@ -62,12 +62,24 @@
 	color: #f5813d;
 }
 .inCart{
-	background-color: #fdefe7;
+	background-color: #d6f5d6;
 }
 
-.scroll_box {
-	border: 1px solid #bbb;
-	position: absolute;
-	text-align: left;
-	top: 10px;
+	.scroll_box {
+		border: 1px solid #bbb;
+		min-height: 400px;
+		min-width: 484px;
+		position: fixed;
+		text-align: left;
+		top: 75px;
+	}
+@media (max-width: 991px) {
+	.scroll_box {
+		border: 1px solid #bbb;
+		min-height: 400px;
+		min-width: 484px;
+		position: relative;
+		text-align: left;
+		top: 50px;
+	}
 }
