@@ -3,11 +3,17 @@
 }
 
 .image-right {
+	display: block;
   float: right;
 }
 
 .image-left {
+	display: block;
   float: left;
+}
+.image-center{
+	margin: auto;
+  width: 50%;
 }
 
 .availability-status {
@@ -50,6 +56,7 @@
 
 .detailedInfo{
 	background-color: #e7f3fd !important;
+	box-shadow: 2px 2px 5px grey;
 	font-family: 'Exo', sans-serif !important;
 }
 .approval{
@@ -62,12 +69,24 @@
 	color: #f5813d;
 }
 .inCart{
-	background-color: #fdefe7;
+	background-color: #d6f5d6;
 }
 
-.scroll_box {
-	border: 1px solid #bbb;
-	position: absolute;
-	text-align: left;
-	top: 10px;
+	.scroll_box {
+		border: 1px solid #bbb;
+		min-height: 400px;
+		min-width: 484px;
+		position: fixed;
+		text-align: left;
+		top: 75px;
+	}
+@media (max-width: 991px) {
+	.scroll_box {
+		border: 1px solid #bbb;
+		min-height: 400px;
+		min-width: 484px;
+		position: relative;
+		text-align: left;
+		top: 50px;
+	}
 }

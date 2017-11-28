@@ -49,6 +49,7 @@
     $scope.PKGOption = false;
     $scope.sponsorOption = false;
     $scope.studentOption = false;
+    $scope.cartDisabled = false;
 
     if (vm.authentication.user === null) {
       $state.go('authentication.signin');
@@ -454,6 +455,7 @@
       if (vm.authentication.user.cartData === undefined || vm.authentication.user.cartData === null) {
         vm.authentication.user.cartData = [];
       }
+      $scope.cartDisabled = true;
       updateSponsorCart();
       $timeout(function () {
         var originalList = Array.from($scope.usersList);
@@ -482,30 +484,6 @@
       if (index !== -1) {
         vm.authentication.user.cartData.splice(index, 1);
       }
-    };
-    window.onload = function () {
-      function getScrollTop() {
-        if (typeof window.pageYOffset !== 'undefined') {
-          // Most browsers
-          return window.pageYOffset;
-        }
-        var d = document.documentElement;
-        if (d.clientHeight) {
-          // IE in standards mode
-          return d.scrollTop;
-        }
-        // IE in quirks mode
-        return document.body.scrollTop;
-      }
-      window.onscroll = function () {
-        var box = document.getElementById('scroll_box');
-        var scroll = getScrollTop();
-        if (scroll <= 28) {
-          box.style.top = '10px';
-        } else {
-          box.style.top = (scroll + 2) + 'px';
-        }
-      };
     };
   }
 }());

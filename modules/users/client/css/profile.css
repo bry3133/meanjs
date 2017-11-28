@@ -22,10 +22,6 @@
   margin:0 1px;
 }
 
-.bg-student-profile {
-  height:36px;
-}
-
 .main-content-student-profile {
   margin:0 auto;
 }
@@ -106,6 +102,7 @@
 .box-student-profile {
   background:#e7f3fd;
   border:1px solid #f0e9eb;
+  box-shadow: 2px 2px 5px grey;
   padding:15px;
 }
 

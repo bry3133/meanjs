@@ -6,10 +6,12 @@
 	<div class="row">
   		<div class="col-md-6 headers">
     		<!--Create the headers on the right side like the title and the cart-->
-				<h1 class="catalog-title image-left" style="color: #095799;">Resume Portal</h1>
-    		<!-- <h1 class="catalog-title image-left"><img src="IPPD_Logo-Outline_BLUE.png" alt="Logo Here"></h1> -->
+				<!--<h1 class="catalog-title image-left" style="color: #095799;">Resume Portal</h1>-->
+				<a href=".">
+					<img class="catalog-title image-left" ng-src="/modules/users/client/img/IPPD_Logos_withTEXT/IPPD_Logo-BLUE_WhiteText.png" height="100" width="240">
+				</a>
     		<h4 id="cart" class="image-right vertical-bottom">
-    			<button type="button" class="btn btn-default" ng-click = "toggleCartTable()">
+    			<button type="button" class="btn btn-default" ng-disabled="cartDisabled" ng-click = "toggleCartTable()">
         			<i class="glyphicon glyphicon-shopping-cart cart"></i><i>Cart</i>
       			</button>
     		</h4>
@@ -167,7 +169,7 @@
 	      </div>
 	    </div>
 	    <div class="col-md-6">
-	      <div class="jumbotron detailedInfo scroll_box" id="scroll_box">
+	      <div class="jumbotron detailedInfo scroll_box">
 					<div ng-if="detailedInfo.availabilityStatus" class="text-right availability-status">
 								<i style="color: #095799;">Employment Status: {{detailedInfo.availabilityStatus}}</i>
 					</div>
@@ -190,7 +192,7 @@
 	                <u class="light-orange"><br>Short Biography</u> <br>{{detailedInfo.bio}}
 	            </div>
 							<!--If the user is a admin or sponser than add the cart button-->
-	            <div class="detail-action-buttons-div" ng-if="vm.authentication.user.type === 'admin' || vm.authentication.user.type === 'sponsor'">
+	           <div class="detail-action-buttons-div" ng-if="vm.authentication.user.type === 'admin' || vm.authentication.user.type === 'sponsor'">
 		        	<div id="addCart" class="image-left" ng-if="!isInCart(detailedInfo.username)">
 		            	<button type="addButton" class="btn btn-success" ng-click="addToCart()">Add to Cart</button>
 		        	</div>
@@ -202,9 +204,8 @@
 		        		<button type="button" class="btn btn-primary" ng-click="goToStudentProfile()" ng-if="detailedInfo.type === 'student'">Go To Profile</button>
 		        	</div>
 		        </div>
-            </div>
+          </div>
 	      </div>
+			  </div>
 	    </div>
-	  </div>
-	</div>
 </section>
