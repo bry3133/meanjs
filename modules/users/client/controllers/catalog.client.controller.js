@@ -483,5 +483,29 @@
         vm.authentication.user.cartData.splice(index, 1);
       }
     };
+    window.onload = function () {
+      function getScrollTop() {
+        if (typeof window.pageYOffset !== 'undefined') {
+          // Most browsers
+          return window.pageYOffset;
+        }
+        var d = document.documentElement;
+        if (d.clientHeight) {
+          // IE in standards mode
+          return d.scrollTop;
+        }
+        // IE in quirks mode
+        return document.body.scrollTop;
+      }
+      window.onscroll = function () {
+        var box = document.getElementById('scroll_box');
+        var scroll = getScrollTop();
+        if (scroll <= 28) {
+          box.style.top = '10px';
+        } else {
+          box.style.top = (scroll + 2) + 'px';
+        }
+      };
+    };
   }
 }());

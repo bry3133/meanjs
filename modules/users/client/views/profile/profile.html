@@ -5,38 +5,55 @@
     <div class=""="header-student-profile">
       <div class="bg-student-profile"></div>
     </div>
-    <div class="main-content-student-profile">
+    <div class="main-content-student-profile information">
       <div class="right-column-student-profile">
         <!--Start out with the user name and their objective -->
-        <div class="student_name-student-profile">{{vm.user.firstName}} {{vm.user.lastName}}</div>
-        <div class="student-profile-h3">Objective</div>
-          <p class="student-profile-p">I am searching for an internship/co-op in the coming spring or summer semester.</p>
-        <div class="student-profile-h3">Education</div>
+        <h1 style="color: #095799;">{{vm.user.firstName}} {{vm.user.lastName}}</h1>
+        <h3 class="orange">Objective</h3>
+          <p>I am searching for an internship/co-op in the coming spring or summer semester.</p>
+        <h3 class="orange">Education</h3>
         <div class="box-student-profile">
-          <p class="student-profile-p">University of Florida, College of Engineering</p>
-          <ul class="student-profile-ul" style="margin-top:10px;">
+          <h4>University of Florida, College of Engineering</h4>
+          <div style="margin-top:10px;">
             <!--Display all the attributes of the user like Graduation Date and GPA -->
-            <li><b>Major:</b> {{vm.user.major}}</li>
-            <li><b>GPA:</b> {{vm.user.gpa}}</li>
-            <li><b>Graduation Date:</b> {{vm.user.graduationDate}}</li>
-            <li><b>Employment Status:</b> {{vm.user.availabilityStatus}}</li>
-          </ul>
+            <div ng-if="vm.user.major">
+              <h4><u class="light-orange">Major</u></h4><p>{{vm.user.major}}</p>
+            </div>
+            <div ng-if="vm.user.gpa">
+              <h4><u class="light-orange">GPA</u></h4><p>{{vm.user.gpa}}</p>
+            </div>
+            <div ng-if="vm.user.graduationDate">
+              <h4><u class="light-orange">Graduation Date</u></h4><p>{{vm.user.graduationDate}}</p>
+            </div>
+            <div ng-if="vm.user.availabilityStatus">
+              <h4><u class="light-orange">Employment Status</u></h4><p>{{vm.user.availabilityStatus}}</p>
+            </div>
+            <div ng-if="vm.user.teamName">
+              <h4><u class="light-orange">Team Name</u></h4><p>{{vm.user.teamName}}</p>
+            </div>
+          </div>
         </div>
         <!--Display the shirt bio that the student will make -->
-        <div class="student-profile-h3">Short Biography</div>
+        <h3 class="orange" style="margin-top:10px;">Short Biography</h3>
         <div class="box-student-profile">
-          <p class="student-profile-p">
-            {{vm.user.bio}}
-          </p>
+          <div ng-if="vm.user.bio">
+            <p>{{vm.user.bio}}</p>
+          </div>
         </div>
         <!--Dispaly the apporval status of the studnet if the user lookign is a admin or student -->
-        <div class="student-profile-h3" ng-if="vm.authentication.user.type === 'student' || vm.authentication.user.type === 'admin'">Admin Approval Status</div>
-        <div class="box-student-profile" style="margin-bottom: 20px;" ng-if="vm.authentication.user.type === 'student' || vm.authentication.user.type === 'admin'">
-          <p class="student-profile-p">
-            <p ng-if="vm.user.approve === false" style="color:red;"><b>Approval Status:</b> No</p>
-            <p ng-if="vm.user.approve === true" style="color:green;"><b>Approval Status:</b> Yes</p>
-            <p><b>Comments:</b> {{vm.user.comments}}</p>
-          </p>
+        <div ng-if="vm.authentication.user.type === 'student' || vm.authentication.user.type === 'admin'">
+          <h3 class="orange" style="margin-top:10px;">Admin Approval Status</h3>
+          <div class="box-student-profile" style="margin-bottom: 20px;">
+              <div ng-if="vm.user.approve === false">
+                 <h4 style="color:red;">Approval Status: No</h4>
+               </div>
+              <div ng-if="vm.user.approve === true">
+                <h4 style="color:green;">Approval Status: Yes</h4>
+              </div>
+              <div ng-if="vm.user.comments">
+                <h4 class="light-orange;"><u>Comments</u></h4><p>{{vm.user.comments}}</p>
+              </div>
+          </div>
         </div>
       </div>
       <!--Display the studnet profile on the left side -->

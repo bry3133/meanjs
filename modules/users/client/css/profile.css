@@ -2,7 +2,7 @@
 .student-profile body {
   background:#FFFFFF;
   color:#2a3845;
-  font:normal 12px/1.6em Arial, Helvetica, sans-serif;
+  font-family: 'Exo', sans-serif !important;
   margin:0;
   padding:0;
 }
@@ -64,7 +64,7 @@
 .student-profile-h1 {
   border-bottom:1px solid #efece7;
   color:#7a2e40;
-  font:normal 17px Georgia, serif;
+  font-family: 'Exo', sans-serif !important;
   margin:0 0 10px;
   padding-bottom:10px;
 }
@@ -72,7 +72,7 @@
 .student-profile-h2 {
   border-bottom:1px solid #efece7;
   color:#7a2e40;
-  font:normal 17px Georgia, serif;
+  font-family: 'Exo', sans-serif !important;
   margin:20px 0 10px;
   padding-bottom:10px;
 }
@@ -80,20 +80,20 @@
 .student-profile-h3 {
   border-bottom:1px solid #efece7;
   color:#7a2e40;
-  font:bold 14px Arial, Helvetica, sans-serif;
+  font-family: 'Exo', sans-serif !important;
   margin:10px 0;
   padding-bottom:10px;
 }
 
 .student-profile-h4 {
   color: white;
-  font:bold 30px Arial, Helvetica, sans-serif;
+  font-family: 'Exo', sans-serif !important;
   margin:10px 0;
 }
 
 .student-profile-h5 {
   color: white;
-  font:bold 14px Arial, Helvetica, sans-serif;
+  font-family: 'Exo', sans-serif !important;
   margin:10px 0;
 }
 
@@ -104,7 +104,7 @@
 }
 
 .box-student-profile {
-  background:#f7f7f7;
+  background:#e7f3fd;
   border:1px solid #f0e9eb;
   padding:15px;
 }
@@ -135,7 +135,7 @@
 
 .student_name-student-profile {
   color:#000000;
-  font:normal 24px Georgia, serif;
+  font-family: 'Exo', sans-serif !important;
   margin-bottom:20px;
 }
 
