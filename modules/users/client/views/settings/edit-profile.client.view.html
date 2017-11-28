@@ -1,6 +1,7 @@
 <!--HTML for when the student wants to edit their profile with all of the infomation -->
+<div class="container">
 <section class="row">
-  <div class="col-xs-offset-1 col-xs-10 col-md-offset-3 col-md-4">
+  <div class="col-xs-offset-1 col-xs-10 col-md-8">
     <form class="signin">
       <fieldset>
         <div class="form-group text-center">
@@ -25,20 +26,20 @@
       </fieldset>
     </form>
   </div>
-  <div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4">
+  <div class="col-xs-offset-1 col-xs-10 col-md-8">
     <!--Form to update the user profile and when submitting go to the updateUserProfile in the controller side -->
     <!--Look through the html and see the differnet attributes that the student can edit. -->
     <form name="vm.userForm" ng-submit="vm.updateUserProfile(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
       <fieldset>
         <div class="form-group" show-errors>
-          <label for="firstName">First Name</label>
+          <label class="orange" for="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" class="form-control" ng-model="vm.user.firstName" placeholder="First Name" required autofocus>
           <div ng-messages="vm.userForm.firstName.$error" role="alert">
             <p class="help-block error-text" ng-message="required">First name is required.</p>
           </div>
         </div>
         <div class="form-group" show-errors>
-          <label for="lastName">Last Name</label>
+          <label class="orange" for="lastName">Last Name</label>
           <input type="text" id="lastName" name="lastName" class="form-control" ng-model="vm.user.lastName" placeholder="Last Name" required>
           <div ng-messages="vm.userForm.lastName.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Last name is required.</p>
@@ -109,3 +110,4 @@
     </form>
   </div>
 </section>
+</div>
