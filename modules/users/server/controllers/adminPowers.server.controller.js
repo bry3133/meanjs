@@ -3,10 +3,10 @@
 /**
  * Module dependencies that sends the info from the clinet controller to the database in mlab
  */
-var path = require('path'),
-  mongoose = require('mongoose'),
-  User = mongoose.model('User'),
-  errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
+var path = require('path');
+var mongoose = require('mongoose');
+var User = mongoose.model('User');
+var errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller'));
 
 /**
  * Show the current user
@@ -19,7 +19,7 @@ exports.read = function (req, res) {
  * Update a User that is edited by the admin in the client side edit-user controller to the mLab
  */
 exports.updateUser = function (req, res) {
-  var user = req.user;
+  var user = req.model;
 
   if (req.body !== null) {
     user.firstName = req.body.firstName;
@@ -45,7 +45,7 @@ exports.updateUser = function (req, res) {
  * Delete a user that is edited by the admin in the client side edit-user controller to the mLab
  */
 exports.deleteUser = function (req, res) {
-  var user = req.user;
+  var user = req.model;
 
   /* Remove the user */
   user.remove(function (err) {
@@ -66,7 +66,6 @@ exports.participantByID = function (req, res, next, id) {
       console.log(err);
       res.status(400).send(err);
     } else {
-      req.user = user;
       req.model = user;
       next();
     }
