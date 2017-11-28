@@ -1,17 +1,23 @@
 <!--html doc for the admin to edit a user attibutes-->
 <section>
-  <div>
-    <h1 class="image-left vertical-bottom" style="color: #095799;">Edit User: <span ng-bind="vm.user.username"></span></h1>
+  <div class="row">
+    <div style="display: inline-block;">
+      <h1 class="image-left vertical-bottom" style="color: #095799;">Edit Username: <span ng-bind="vm.user.username"></span></h1>
+    </div>
+    <a href="../catalog">
+      <img class="image-right" ng-src="/modules/users/client/img/IPPD_Logos_withTEXT/IPPD_Logo-ORANGE_WhiteText.png" height="70" width="160">
+    </a><br>
     <div class="image-right vertical-bottom user-delete-div">
       <button class="btn btn-danger btn-lg" ng-click="remove()">Delete User</button>
     </div>
   </div>
-  <hr width="100%">
+<div class="row">
   <div class="col-md-12">
     <!--Call on the update function in the edit user contorller when the user submits this form-->
+    <div>
     <form name="userForm" ng-submit="update(userForm.$valid)" novalidate>
       <fieldset>
-        <div class="form-group" show-errors>
+        <div class="form-group"show-errors>
           <label class="orange" for="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" class="form-control" ng-model="vm.user.firstName" placeholder="First Name" required autofocus />
           <div ng-messages="userForm.firstName.$error" role="alert">
@@ -55,5 +61,7 @@
         </div>
       </fieldset>
     </form>
+    </div>
   </div>
+</div>
 </section>
