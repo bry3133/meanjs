@@ -29,11 +29,11 @@
             <input type="password" id="password" name="password" class="customInputBox" ng-model="vm.credentials.password" placeholder="Password" required>
           </div>
           <div class="terms-div">
-            <label>
-              <input type="checkbox" name="checkbox" value="check" class="terms-check-box" style="color: #F37022;"><span> I agree to the <a href="/terms_and_conditions" target="_blank"> Terms & Conditions</a></span>
+            <label for="checkbox">
+              <input type="checkbox" id="checkbox" name="checkbox" value="check" class="terms-check-box" style="color: #F37022;"><span> I agree to the <a href="/terms_and_conditions" target="_blank"> Terms & Conditions</a></span>
             </label>
           </div>
-          <input type="submit" value="Sign in" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}"  />
+          <input type="submit" id= "submitbtn" value="Sign in" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}"  />
         </fieldset>
       </div>
     </form>
