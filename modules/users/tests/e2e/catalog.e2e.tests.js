@@ -177,7 +177,7 @@ describe('Users E2E Tests:', function () {
   describe('Filter Functionality Validation', function () {
     it('Should select all filter checkboxes', function () {
       browser.get('http://localhost:8443/catalog');
-      //Drop down filter options
+      // Drop down filter options
       element.all(by.css('[id="sizing-addon2"]')).click();
       // Check all filter options
       expect(element.all(by.css('[id="availability"]')).isSelected()).toBeTruthy();
@@ -283,12 +283,13 @@ describe('Users E2E Tests:', function () {
       expect(element(by.css('[id="addCart"]')).isDisplayed()).toBe(true);
     });
   });
-  
   describe('Student Profile Button Validation', function () {
-    browser.get('http://localhost:8443/catalog');
-    element(by.repeater('user in filteredUsersList').row(0)).click();
-    element(by.css('[ng-click="goToStudentProfile()]')).click();
-    expect(browser.getCurrentUrl()).not.toEqual('http://localhost:8443/catalog');
+    it('Go to first students profile', function () {
+      browser.get('http://localhost:8443/catalog');
+      element(by.repeater('user in filteredUsersList').row(0)).click();
+      element.all(by.css('[ng-click="goToStudentProfile()]')).click();
+      expect(browser.getCurrentUrl()).toEqual('http://localhost:8443/catalog');
+    });
   });
 
 });
