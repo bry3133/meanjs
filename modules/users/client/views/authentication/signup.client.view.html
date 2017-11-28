@@ -1,7 +1,15 @@
 <!--HTML doc for when the admin adds a new user to the database-->
-<div>
-  <h1 class="col-xs-12 text-center" style="color: #095799;">Register a user</h1>
-  <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
+<section>
+  <div class="page-header row">
+    <div style="display: inline-block;">
+      <h1 style="color: #095799;">Register a User</h1>
+    </div>
+      <a href="../catalog">
+        <img class="image-right" ng-src="/modules/users/client/img/IPPD_Logos_withTEXT/IPPD_Logo-ORANGE_WhiteText.png" height="70" width="160">
+      </a>
+  </div>
+  <div class="row">
+  <nav class="col-md-offset-2 col-md-8">
     <!--When the user submit the form go to the signup function in the contorller file-->
     <form name="userForm" ng-submit="signup(userForm.$valid)" class="signin" novalidate autocomplete="off">
       <fieldset>
@@ -82,5 +90,6 @@
         </div>
       </fieldset>
     </form>
-  </div>
+  </nav>
 </div>
+</section>

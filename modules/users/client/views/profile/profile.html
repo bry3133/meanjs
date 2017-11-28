@@ -3,7 +3,6 @@
 <body class="student-profile">
   <div class=""="wrapper-student-profile">
     <div class=""="header-student-profile">
-      <div class="bg-student-profile"></div>
     </div>
     <div class="main-content-student-profile information">
       <div class="right-column-student-profile">
@@ -35,7 +34,7 @@
         </div>
         <!--Display the shirt bio that the student will make -->
         <h3 class="orange" style="margin-top:10px;">Short Biography</h3>
-        <div class="box-student-profile">
+        <div class="box-student-profile" style="margin-bottom: 20px;">
           <div ng-if="vm.user.bio">
             <p>{{vm.user.bio}}</p>
           </div>
@@ -58,6 +57,9 @@
       </div>
       <!--Display the studnet profile on the left side -->
       <div class="left-column-student-profile">
+        <div>
+            <img ng-src="/modules/users/client/img/IPPD_Logos_withTEXT/IPPD_Logo-BLUE_WhiteText.png" height="95" width="210">
+        </div>
         <div class="main-image-student-profile">
           <img ngf-src="vm.user.base64ProfileImageURL" alt="{{vm.user.displayName}}" class="img-thumbnail user-profile-picture" ngf-drop width="200px" height="200px">
         </div>

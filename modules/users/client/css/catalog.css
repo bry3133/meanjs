@@ -3,10 +3,12 @@
 }
 
 .image-right {
+	display: block;
   float: right;
 }
 
 .image-left {
+	display: block;
   float: left;
 }
 
@@ -50,6 +52,7 @@
 
 .detailedInfo{
 	background-color: #e7f3fd !important;
+	box-shadow: 2px 2px 5px grey;
 	font-family: 'Exo', sans-serif !important;
 }
 .approval{
