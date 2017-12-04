@@ -2,8 +2,8 @@
 
 describe('Users E2E Tests:', function () {
   var user1 = {
-    "lastName": "Sponsor",
-    "firstName": "Microsoft",
+    'lastName': 'Sponsor',
+    'firstName': 'Microsoft',
     email: 'test@test.com',
     username: 'ryansponsor',
     password: 'Testpassword11!'

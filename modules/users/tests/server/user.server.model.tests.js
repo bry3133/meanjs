@@ -22,26 +22,15 @@ var user1,
 describe('User Model Unit Tests:', function () {
 
   before(function () {
-    user1 = {
-      firstName: 'Full',
-      lastName: 'Name',
-      displayName: 'Full Name',
+    var user1 = {
+      'lastName': 'Sponsor',
+      'firstName': 'Microsoft',
       email: 'test@test.com',
-      username: 'username',
-      password: 'M3@n.jsI$Aw3$0m3',
-      provider: 'local'
+      username: 'ryansponsor',
+      password: 'Testpassword11!'
     };
     // user2 is a clone of user1
     user2 = user1;
-    user3 = {
-      firstName: 'Different',
-      lastName: 'User',
-      displayName: 'Full Different Name',
-      email: 'test3@test.com',
-      username: 'different_username',
-      password: 'Different_Password1!',
-      provider: 'local'
-    };
   });
 
   describe('Method Save', function () {
