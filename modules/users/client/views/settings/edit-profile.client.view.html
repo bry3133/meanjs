@@ -27,6 +27,8 @@
     </form>
   </div>
   <div class="col-xs-offset-1 col-xs-10 col-md-8">
+    <input type="file" id="resume">
+    <button ng-click="uploadDocs(resume)"type="submit" class="btn btn-primary">Upload Resume</button>
     <!--Form to update the user profile and when submitting go to the updateUserProfile in the controller side -->
     <!--Look through the html and see the differnet attributes that the student can edit. -->
     <form name="vm.userForm" ng-submit="vm.updateUserProfile(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
