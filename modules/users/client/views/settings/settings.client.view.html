@@ -1,6 +1,14 @@
 <section>
-  <div class="page-header">
-    <h1>Settings</h1>
+  <div class="page-header row">
+    <div style="display: inline-block;">
+      <h1 style="color: #095799;">Settings</h1>
+    </div>
+    <a ng-if="vm.user.type === 'student'" href="../profile">
+      <img class="image-right" ng-src="/modules/users/client/img/IPPD_Logos_withTEXT/IPPD_Logo-ORANGE_WhiteText.png" height="70" width="160">
+    </a>
+    <a ng-if="vm.user.type === 'sponsor' || vm.user.type ==='admin'" href="../catalog">
+      <img class="image-right" ng-src="/modules/users/client/img/IPPD_Logos_withTEXT/IPPD_Logo-ORANGE_WhiteText.png" height="70" width="160">
+    </a>
   </div>
   <div class="row">
     <nav class="col-sm-3 col-md-3">
@@ -13,7 +21,7 @@
         </li>
       </ul>
     </nav>
-    <div class="col-sm-9 col-md-8 settings-view">
+    <div class="col-sm-9 col-md-9 settings-view">
       <div ui-view></div>
     </div>
   </div>
