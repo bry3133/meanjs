@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "for-youtube-api-key-156218",
+  "private_key_id": "esrtbrdntsty54e5n7utmid7u6wt",
+  "private_key": "n76y45bw45ebe6n58rmn7te6rwby45bb67e6rb5768r7e6wyv5",
+  "client_email": "ippd-241@for-youtube-api-key-156218.iam.gserviceaccount.com",
+  "client_id": "100100866578467518210",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ippd-241%40for-youtube-api-key-156218.iam.gserviceaccount.com"
+}
